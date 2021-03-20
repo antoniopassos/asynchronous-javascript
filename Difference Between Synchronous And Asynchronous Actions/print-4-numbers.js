@@ -19,6 +19,7 @@ function print3() {
 
     fs.readFile('./number3.txt', 'utf-8', function (err, number3) {
         console.log(number3);
+        print4();
     });
 }
 
@@ -31,4 +32,3 @@ function print4() {
 print1();
 print2();
 print3();
-print4();
