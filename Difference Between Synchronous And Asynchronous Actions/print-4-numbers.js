@@ -15,12 +15,14 @@ function print2() {
 }
 
 function print3() {
-    const fs = require('fs');
-
-    fs.readFile('./number3.txt', 'utf-8', function (err, number3) {
+    const callback = function (err, number3) {
         console.log(number3);
         print4();
-    });
+    }
+
+    const fs = require('fs');
+
+    fs.readFile('./number3.txt', 'utf-8', callback);
 }
 
 function print4() {
